@@ -232,7 +232,7 @@ namespace LibGit2Sharp.Tests.TestHelpers
             Assert.True(r.Success, text);
         }
 
-        public RepositoryOptions BuildFakeConfigs(SelfCleaningDirectory scd, RepositoryOptions options)
+        public RepositoryOptions BuildFakeConfigs(SelfCleaningDirectory scd, RepositoryOptions options = null)
         {
             options = BuildFakeRepositoryOptions(scd, options);
 
@@ -256,7 +256,7 @@ namespace LibGit2Sharp.Tests.TestHelpers
             return options;
         }
 
-        private static RepositoryOptions BuildFakeRepositoryOptions(SelfCleaningDirectory scd, RepositoryOptions options)
+        private static RepositoryOptions BuildFakeRepositoryOptions(SelfCleaningDirectory scd, RepositoryOptions options = null)
         {
             options = options ?? new RepositoryOptions();
 
